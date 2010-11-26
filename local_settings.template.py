@@ -58,17 +58,6 @@ logging.basicConfig(
 	filemode = 'a',
 )
 
-# djanog-compress settings.
-# Insert link or script tags for compressed JS/CSS files - must run ./manage.py synccompress
-# If false, this inserts the uncompressed version. Use this in development.
-COMPRESS = False
-
-# Add version strings to compressed files
-COMPRESS_VERSION = True
-
-# Automatically generate new compressed JS and CSS files without running synccompress - only use this in DEV
-COMPRESS_AUTO = DEBUG
-
 # Uncomment to add a debug toolbar if in DEBUG mode - requires debug_toolbar
 # Add the debug toolbar if in debug mode
 #if DEBUG == True:
