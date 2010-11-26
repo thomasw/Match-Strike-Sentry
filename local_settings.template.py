@@ -58,6 +58,9 @@ logging.basicConfig(
 	filemode = 'a',
 )
 
+# Django Sentry
+SENTRY_KEY = '0123456789abcde'
+
 # Uncomment to add a debug toolbar if in DEBUG mode - requires debug_toolbar
 # Add the debug toolbar if in debug mode
 #if DEBUG == True:
