@@ -1,9 +1,3 @@
-ADMINS = (
-	('Mr. Admin', 'info@test.tld'),
-)
-
-MANAGERS = ADMINS
-
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -19,7 +13,7 @@ LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
-SITE_NAME='New Site'
+SITE_NAME='Match Strike: Sentry'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -28,7 +22,6 @@ USE_I18N = True
 # Make this unique, and don't share it with anybody.
 # Moved this to local_settings.py if you plan to share this project in a
 # public repo.
-SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # List of all installed authentication backends
 AUTHENTICATION_BACKENDS = (
@@ -68,8 +61,11 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.admin',
 	'django_extensions',
-	#'south',
-	'compress',
+	'south',
+	'indexer',
+	'paging',
+	'sentry',
+	'sentry.client',
 )
 
 # Login configuration
@@ -81,34 +77,6 @@ LOGIN_REDIRECT_URL = '/'
 EMAIL_SUBJECT_PREFIX = '[%s] ' % (SITE_NAME,)
 DEFAULT_FROM_EMAIL = 'info@matchstrike.net'
 SEND_BROKEN_LINK_EMAILS = False
-
-# Profile Configuration
-# AUTH_PROFILE_MODULE = "accounts.Profile"
-
-# djanog-compress settings.
-COMPRESS_CSS = {
-	'main': {
-		'source_filenames': (
-		    #'css/reset.css',
-			'css/site.css',
-		),
-		'output_filename': 'css/site.r?.css',
-    },
-}
-
-COMPRESS_JS = {
-	'main': {
-		'source_filenames': (
-			'js/googleAnalytics.js',
-			'js/form.js',
-			'js/site.js',
-		),
-		'output_filename': 'js/site.r?.js',
-	},
-}
-
-# Cache settings
-CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 # Import local settings.
 try:

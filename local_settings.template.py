@@ -1,15 +1,21 @@
 import logging
 import os
 
+
+ADMINS = (
+	('Name', 'email-address@domain.tld'),
+)
+
+MANAGERS = ADMINS
+
+SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # E-mail config
 if DEBUG:
 	EMAIL_PORT = 1025
-	
-if DEBUG == True:
-	CACHE_BACKEND = 'dummy:///'
 
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 
