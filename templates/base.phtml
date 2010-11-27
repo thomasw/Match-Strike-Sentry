@@ -1,14 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 		"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>{% block head %}{% load compressed %}
+<head>{% block head %}
 	<title>{% block title %}{{SITE_NAME}}{% endblock %}</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	{% block links %}{% compressed_css 'main' %}
 	<link rel="icon" href="{{MEDIA_URL}}img/favicon.ico" type="image/x-icon" />
-	<link rel="image_src" href="{{MEDIA_URL}}img/icon.png" />{% endblock %}
-	{% block scripts %}{% if DEBUG %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>{% else %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>{% endif %}
-	{% compressed_js 'main' %}{% endblock %}
 	{% block meta %}<meta name="ROBOTS" content="{% block meta_robots %}ALL{% endblock %}" />
 	<meta name="description" content="{% block meta_description %}This is {{SITE_NAME}}.{% endblock %}" />
 	<meta name="author" content="{% block meta_author %}Match Strike{% endblock %}" />
