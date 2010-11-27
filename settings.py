@@ -67,11 +67,6 @@ INSTALLED_APPS = (
 	'sentry.client',
 )
 
-# Login configuration
-LOGIN_URL = '/login/'
-LOGOUT_URL = '/logout/'
-LOGIN_REDIRECT_URL = '/'
-
 # E-mail config
 EMAIL_SUBJECT_PREFIX = '[%s] ' % (SITE_NAME,)
 DEFAULT_FROM_EMAIL = 'info@matchstrike.net'
