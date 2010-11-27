@@ -65,6 +65,7 @@ INSTALLED_APPS = (
 	'paging',
 	'sentry',
 	'sentry.client',
+	'gunicorn'
 )
 
 # E-mail config

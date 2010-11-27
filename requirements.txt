@@ -6,3 +6,4 @@ django>=1.2.2
 -e git+git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
 django-sentry
 MySQL-python
+gunicorn
